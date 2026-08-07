@@ -43,78 +43,200 @@
 // export default Navbar
 
 
+// import { Link, NavLink } from "react-router-dom";
+
+// const Navbar = () => {
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-light custom-navbar sticky-top">
+//       <div className="container">
+
+//         {/* Logo */}
+
+//         <Link to="/" className="navbar-brand fw-bold fs-3 logo">
+//           ZANNY <span>BEAUTY</span>
+//         </Link>
+
+//         {/* Mobile Toggle */}
+
+//         <button
+//           className="navbar-toggler border-0 shadow-none"
+//           type="button"
+//           data-bs-toggle="collapse"
+//           data-bs-target="#navbarText"
+//         >
+//           <span className="navbar-toggler-icon"></span>
+//         </button>
+
+//         {/* Navigation */}
+
+//         <div className="collapse navbar-collapse" id="navbarText">
+
+//           <ul className="navbar-nav mx-auto">
+
+//             <li className="nav-item">
+//               <NavLink to="/" className="nav-link">
+//                 Home
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item">
+//               <NavLink to="/produce" className="nav-link">
+//                 Products
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item">
+//               <NavLink to="/porfolio" className="nav-link">
+//                 Services
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item">
+//               <NavLink to="/blog" className="nav-link">
+//                 Blog
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item">
+//               <NavLink to="/about" className="nav-link">
+//                 About
+//               </NavLink>
+//             </li>
+
+//             <li className="nav-item">
+//               <NavLink to="/contact" className="nav-link">
+//                 Contact
+//               </NavLink>
+//             </li>
+
+//           </ul>
+
+//           {/* CTA */}
+
+//           <Link
+//             to="/produce"
+//             className="btn btn-dark rounded-pill px-4"
+//           >
+//             Shop Now
+//           </Link>
+
+//         </div>
+
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light custom-navbar sticky-top">
+    <nav className="navbar navbar-expand-lg custom-navbar sticky-top">
+
       <div className="container">
 
-        {/* Logo */}
-
-        <Link to="/" className="navbar-brand fw-bold fs-3 logo">
+        <Link
+          to="/"
+          className="navbar-brand logo"
+          onClick={closeMenu}
+        >
           ZANNY <span>BEAUTY</span>
         </Link>
-
-        {/* Mobile Toggle */}
 
         <button
           className="navbar-toggler border-0 shadow-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <i
+            className={`fa-solid ${
+              menuOpen ? "fa-xmark" : "fa-bars"
+            }`}
+          ></i>
         </button>
 
-        {/* Navigation */}
-
-        <div className="collapse navbar-collapse" id="navbarText">
-
+        <div
+          className={`collapse navbar-collapse ${
+            menuOpen ? "show" : ""
+          }`}
+        >
           <ul className="navbar-nav mx-auto">
 
             <li className="nav-item">
-              <NavLink to="/" className="nav-link">
+              <NavLink
+                to="/"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 Home
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/produce" className="nav-link">
+              <NavLink
+                to="/produce"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 Products
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/porfolio" className="nav-link">
+              <NavLink
+                to="/portfolio"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 Services
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/blog" className="nav-link">
+              <NavLink
+                to="/blog"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 Blog
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/about" className="nav-link">
+              <NavLink
+                to="/about"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 About
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="/contact" className="nav-link">
+              <NavLink
+                to="/contact"
+                className="nav-link"
+                onClick={closeMenu}
+              >
                 Contact
               </NavLink>
             </li>
 
           </ul>
 
-          {/* CTA */}
-
           <Link
             to="/produce"
+            onClick={closeMenu}
             className="btn btn-dark rounded-pill px-4"
           >
             Shop Now
@@ -123,6 +245,7 @@ const Navbar = () => {
         </div>
 
       </div>
+
     </nav>
   );
 };

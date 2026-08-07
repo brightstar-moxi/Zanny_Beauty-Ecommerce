@@ -1,4 +1,4 @@
-//  import Navbar from "./Navbar"
+ import Navbar from "./Navbar"
 // import { Link } from "react-router-dom"
 // import Connect from "./Connect"
 // import perfume from "./new_up-removebg-preview.png"
@@ -15,7 +15,7 @@ import lin3 from "./closure.jpg"
   
 //     return(
 //     <>
-//       <Navbar/>
+//      
       
 
 //         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -285,6 +285,8 @@ const heroSlides = [
 export default function HeroCarousel() {
   return (
     <section className="mb-5">
+       <Navbar/>
+       
       <div
         id="heroCarousel"
         className="carousel slide carousel-fade"

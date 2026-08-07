@@ -1,6 +1,6 @@
  import Navbar from "./Navbar"
 // import { Link } from "react-router-dom"
-// import Connect from "./Connect"
+ import Connect from "./Connect"
 // import perfume from "./new_up-removebg-preview.png"
 // import perfume2 from "./new_update_2-removebg-preview.png"
 //  import perfume3 from "./background6-removebg-preview.png"
@@ -286,7 +286,7 @@ export default function HeroCarousel() {
   return (
     <section className="mb-5">
        <Navbar/>
-       
+
       <div
         id="heroCarousel"
         className="carousel slide carousel-fade"
@@ -1124,6 +1124,8 @@ export default function HeroCarousel() {
     </div>
 
 </section>
+
+ <Connect/>
     </section>
 
     

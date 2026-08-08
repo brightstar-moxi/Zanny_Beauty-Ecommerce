@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Pacifico&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .App {
   text-align: center;
@@ -40,11 +40,11 @@
               /* 0 0 100px fuchsia; */
 
 
-.bt {
+/* .bt {
 
  color: white;
 /* background-color: blue; */
-animation-name: butt;
+/* animation-name: butt;
 animation-duration:2s;
 animation-iteration-count: infinite;
 }
@@ -77,19 +77,19 @@ li:hover span{
 .change:hover{
 background-color:rgb(122, 6, 232);
 border: 1px solid fuchsia;
-}
+} */
 /* // div for connect */
-.child{
+/* .child{
   width:  329px;
   height: 104px;
   min-width: 120px;
   background-color: whitesmoke;
-  margin:30px;
+  margin:30px; */
 
 
 
 /* margin: center; */
-}
+/* }
 
 
 .parent{
@@ -97,18 +97,18 @@ border: 1px solid fuchsia;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: center;
-align-items: center;
+align-items: center; */
 
 /* background-color:rgb(231, 224, 224); */
 
-}
+/* }
 .child{
-display: flex;
+display: flex; */
 /* justify-content: center; */
 
 
 
-
+/* 
 }
 .caropix {
   height: 65vh;
@@ -210,7 +210,7 @@ video{
   height: 100px;
   /* background-color:linear-gradient(to right, blue, deeppink) !important;;
   transition: all 10s; */
-  position:relative;
+  /* position:relative;
   margin-top: 1%;
   animation-name: move;
   animation-duration: 9s;
@@ -296,9 +296,9 @@ body{
 .mail{
   font-size :15px;
 }
-}
+}  */
 /* Computer\HKEY_CURRENT_USER\Control Panel\Accessibility\Blind Access\On */
-.man:hover .over{
+/* .man:hover .over{
   display: inherit;
   background-color: rgb(225, 12, 119);
   color: white;
@@ -333,7 +333,11 @@ top:25%;
 }
 .ove{
   display: none;
-}
+}  */
+
+
+
+
 /* .form {
  
   font-family: sans-serif;
@@ -548,9 +552,9 @@ button {
     display:inline-block;
     padding:8px 18px;
 
-    background:#ffe4ef;
+    background:hsl(0, 0%, 0%);
 
-    color:#d63384;
+    color:#ffffff;
 
     border-radius:30px;
 
@@ -868,7 +872,7 @@ button {
 
 .custom-navbar{
 
-    background:rgba(255,255,255,.95);
+   /* background: #fdf7fa; */
 
     backdrop-filter:blur(12px);
 
@@ -1243,5 +1247,146 @@ button {
 .contact-form-card button:hover{
 
     transform:translateY(-3px);
+
+}
+
+
+/* footer */
+
+.modern-footer {
+  background: #6f465d;
+  color: #fff;
+  padding: 70px 0 25px;
+}
+
+.footer-brand {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.footer-brand span {
+  color: #f5c1d8;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.footer-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 13px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #f5c1d8;
+  color: #6f465d;
+  transform: translateY(-4px);
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+.footer-contact i {
+  color: #f5c1d8;
+  margin-top: 4px;
+}
+
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 45px 0 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+
+  .modern-footer {
+    padding: 50px 0 25px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 
 }

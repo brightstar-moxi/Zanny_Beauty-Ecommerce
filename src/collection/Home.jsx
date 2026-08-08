@@ -3,13 +3,13 @@
  import Connect from "./Connect"
 // import perfume from "./new_up-removebg-preview.png"
 // import perfume2 from "./new_update_2-removebg-preview.png"
-//  import perfume3 from "./background6-removebg-preview.png"
+  // import perfume3 from "./background6-removebg-preview.png"
   import perfume4 from "./new_update_1-removebg.png"
 
 import lin from "./weavon.jpg"
 import lin2 from "./fronter.jpg"
 import lin3 from "./closure.jpg"
-// import Footer from "./Footer"
+ import Footer from "./Footer"
 
 // const Home =() =>{
   
@@ -906,7 +906,7 @@ export default function HeroCarousel() {
             <div className="col-lg-6">
 
                 <img
-                    src={perfume4}
+                    src={perfume3}
                     alt="Hair Services"
                     className="img-fluid rounded-4 shadow-lg"
                 />
@@ -1015,7 +1015,7 @@ export default function HeroCarousel() {
                 <div className="about-image-wrapper">
 
                     <img
-                        src={perfume4}
+                        src={perfume2}
                         alt="About Zanny Beauty Palace"
                         className="img-fluid rounded-4 shadow-lg"
                     />
@@ -1126,6 +1126,8 @@ export default function HeroCarousel() {
 </section>
 
  <Connect/>
+
+ <Footer/>
     </section>
 
     

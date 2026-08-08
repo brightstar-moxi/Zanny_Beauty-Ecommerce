@@ -194,10 +194,84 @@
 // export default Connect
 
 
+// import { Link } from "react-router-dom";
+// import video from "./MODERN HAIR SALON.mp4";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import video from "./MODERN HAIR SALON.mp4";
 
+
 const Connect = () => {
+
+  const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+});
+
+const [submitted, setSubmitted] = useState(false);
+const [error, setError] = useState(false);
+const [loading, setLoading] = useState(false);
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+const submit = async (e) => {
+  e.preventDefault();
+
+  setSubmitted(false);
+  setError(false);
+
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.phone ||
+    !formData.subject ||
+    !formData.message
+  ) {
+    setError(true);
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    // Replace with your real backend endpoint
+    const res = await fetch("YOUR_API_ENDPOINT", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed");
+    }
+
+    setSubmitted(true);
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+  } catch (err) {
+    setError(true);
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <>
       {/* Hero */}
@@ -332,6 +406,14 @@ const Connect = () => {
 
             </div>
             
+
+          </div>
+
+        </div>
+
+      </section>
+
+      
             <section className="py-5">
 
   <div className="container">
@@ -414,13 +496,14 @@ const Connect = () => {
                   Full Name
                 </label>
 
-                <input
-                  type="text"
-                  className="form-control modern-input"
-                  placeholder="John Doe"
-                  value={name}
-                  onChange={(e)=>setName(e.target.value)}
-                />
+               <input
+  type="text"
+  name="name"
+  className="form-control modern-input"
+  placeholder="John Doe"
+  value={formData.name}
+  onChange={handleChange}
+/>
 
               </div>
 
@@ -434,8 +517,9 @@ const Connect = () => {
                   type="email"
                   className="form-control modern-input"
                   placeholder="john@example.com"
-                  value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                 name="email"
+value={formData.email}
+onChange={handleChange}
                 />
 
               </div>
@@ -446,13 +530,14 @@ const Connect = () => {
                   Phone Number
                 </label>
 
-                <input
-                  type="tel"
-                  className="form-control modern-input"
-                  placeholder="+234..."
-                  value={number}
-                  onChange={(e)=>setNumber(e.target.value)}
-                />
+              <input
+  type="tel"
+  name="phone"
+  className="form-control modern-input"
+  placeholder="+234..."
+  value={formData.phone}
+  onChange={handleChange}
+/>
 
               </div>
 
@@ -463,12 +548,13 @@ const Connect = () => {
                 </label>
 
                 <input
-                  type="text"
-                  className="form-control modern-input"
-                  placeholder="How can we help?"
-                  value={subject}
-                  onChange={(e)=>setSubject(e.target.value)}
-                />
+  type="text"
+  name="subject"
+  className="form-control modern-input"
+  placeholder="How can we help?"
+  value={formData.subject}
+  onChange={handleChange}
+/>
 
               </div>
 
@@ -480,14 +566,14 @@ const Connect = () => {
                 Message
               </label>
 
-              <textarea
-                rows="6"
-                className="form-control modern-input"
-                placeholder="Write your message..."
-                value={textarea}
-                onChange={(e)=>setTextarea(e.target.value)}
-              ></textarea>
-
+            <textarea
+  rows="6"
+  name="message"
+  className="form-control modern-input"
+  placeholder="Write your message..."
+  value={formData.message}
+  onChange={handleChange}
+></textarea>
             </div>
 
             {/* Alerts */}
@@ -516,16 +602,15 @@ const Connect = () => {
 
             )}
 
-            <button
-              className="btn btn-dark rounded-pill px-5 py-3"
-            >
+           <button
+  type="submit"
+  className="btn btn-dark rounded-pill px-5 py-3"
+  disabled={loading}
+>
+  <i className="fa-solid fa-paper-plane me-2"></i>
 
-              <i className="fa-solid fa-paper-plane me-2"></i>
-
-              Send Message
-
-            </button>
-
+  {loading ? "Sending..." : "Send Message"}
+</button>
           </form>
 
         </div>
@@ -537,12 +622,6 @@ const Connect = () => {
   </div>
 
 </section>
-
-          </div>
-
-        </div>
-
-      </section>
     </>
   );
 };

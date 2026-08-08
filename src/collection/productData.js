@@ -41,61 +41,205 @@ export const weavons = [
   {
     id: 1,
     name: "Deep body Weave",
-    image: weavon1,
-    price: 0,
+    image: under1,
+    price: 4000,
   },
   {
     id: 2,
     name: "Natural Weave",
-    image: weavon2,
-    price: 0,
+    image: under2,
+    price: 4000,
   },
    {
     id: 3,
     name: "4.5mm Curly Weave",
-    image: weavon2,
-    price: 0,
+    image: under3,
+    price: 4000,
   },
    {
     id: 4,
     name: "Body, loose,kinky curly wave",
-    image: weavon2,
-    price: 0,
+    image: under4,
+    price: 4000,
   },
    {
     id: 5,
     name: " Loose Wave",
-    image: weavon2,
-    price: 0,
+    image: under5,
+    price: 4000,
   },
    {
     id: 6,
     name: "New Curly Wave",
-    image: weavon2,
-    price: 0,
+    image: under6,
+    price: 4000,
   },
    {
     id: 7,
     name: "Kinky Straight wave",
-    image: weavon2,
-    price: 0,
+    image: under7,
+    price: 4000,
   },
    {
     id: 8,
     name: "Deep Curly wave",
-    image: weavon2,
-    price: 0,
+    image: under8,
+   price: 2000,  
   },
 ];
 
 export const frontals = [
   // your existing frontal products
+   {
+    id: 1,
+    name: "Frontal",
+    image: frontal1,
+   price: 2000,  
+  },
+   {
+    id: 2,
+    name: "Frontal",
+    image: frontal2,
+   price: 2000,  
+  },
+   {
+    id: 3,
+    name: "Frontal",
+    image: frontal3,
+   price: 2000,  
+  },
+   {
+    id: 4,
+    name: "Frontal",
+    image: frontal4,
+   price: 2000,  
+  },
+   {
+    id: 5,
+    name: "Frontal",
+    image: frontal5,
+   price: 2000,  
+  },
+   {
+    id: 6,
+    name: "Frontal",
+    image: frontal6,
+   price: 2000,  
+  },
+   {
+    id: 7,
+    name: "Frontal",
+    image: frontal7,
+   price: 2000,  
+  },
+   {
+    id: 8,
+    name: "Frontal",
+    image: frontal8,
+   price: 2000,  
+  },
 ];
 
 export const closures = [
   // your existing closure products
+  {
+    id: 1,
+    name: "Closure",
+    image: close1,
+   price: 2000,  
+  },
+   {
+    id: 2,
+    name: "Closure",
+    image: close2,
+   price: 2000,  
+  },
+   {
+    id: 3,
+    name: "Closure",
+    image: close3,
+   price: 2000,  
+  },
+   {
+    id: 4,
+    name: "Closure",
+    image: close4,
+   price: 2000,  
+  },
+   {
+    id: 5,
+    name: "Closure",
+    image: close5,
+   price: 2000,  
+  },
+   {
+    id: 6,
+    name: "Closure",
+    image: close6,
+   price: 2000,  
+  },
+   {
+    id: 7,
+    name: "Closure",
+    image: close7,
+   price: 2000,  
+  },
+   {
+    id: 8,
+    name: "Closure",
+    image: close8,
+   price: 2000,  
+  },
 ];
 
 export const footwares = [
   // your existing footware products
+  {
+    id: 1,
+    name: "Hill sandal",
+    image: foot1,
+   price: 2000,  
+  },
+   {
+    id: 2,
+    name: "Woman hill",
+    image: foot2,
+   price: 2000,  
+  },
+   {
+    id: 3,
+    name: "Sandal",
+    image: foot3,
+   price: 2000,  
+  },
+   {
+    id: 4,
+    name: "Sandal",
+    image: foot4,
+   price: 2000,  
+  },
+   {
+    id: 5,
+    name: "Neat Sandal",
+    image: foot5,
+   price: 2000,  
+  },
+   {
+    id: 6,
+    name: "Ladies Flat shoe",
+    image: foot6,
+   price: 2000,  
+  },
+   {
+    id: 7,
+    name: "Snickers",
+    image: foot7,
+   price: 2000,  
+  },
+   {
+    id: 8,
+    name: "Snicker",
+    image: foot8,
+   price: 2000,  
+  },
 ];

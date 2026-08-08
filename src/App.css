@@ -499,8 +499,584 @@ button {
 
 
 
+/* added hero */
+/* =========================================
+   MODERN HERO
+========================================= */
+
+.modern-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
 
 
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.hero-glow-one {
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  top: -180px;
+  left: -100px;
+}
+
+.hero-glow-two {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  right: -180px;
+  bottom: -220px;
+}
+
+.hero-circle {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-circle-one {
+  width: 300px;
+  height: 300px;
+  right: 8%;
+  top: 10%;
+}
+
+.hero-circle-two {
+  width: 180px;
+  height: 180px;
+  left: 15%;
+  bottom: -80px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 650px;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 50px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-badge-icon {
+  font-size: 16px;
+}
+
+
+/* =========================================
+   SMALL TITLE
+========================================= */
+
+.hero-small-title {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  margin: 0;
+
+  max-width: 700px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+  font-size: 1.15rem;
+
+  line-height: 1.8;
+
+  max-width: 580px;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons .btn {
+  min-height: 54px;
+
+  padding: 0 28px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.hero-btn-primary {
+  background: #ffffff;
+
+  color: #222;
+
+  border: none;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn-primary:hover {
+  color: #222;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero-btn-secondary {
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-btn-secondary:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TRUST ITEMS
+========================================= */
+
+.hero-trust {
+  opacity: 0.9;
+}
+
+.trust-item {
+  font-size: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.trust-item i {
+  font-size: 14px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.hero-image-wrapper {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 500px;
+}
+
+
+.hero-image {
+  position: relative;
+
+  z-index: 3;
+
+  max-height: 540px;
+
+  width: auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 25px 35px rgba(0, 0, 0, 0.2));
+
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+
+/* Image glow */
+
+.hero-image-glow {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  filter: blur(50px);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   FLOATING CARD
+========================================= */
+
+.hero-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  bottom: 45px;
+
+  left: 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+
+.floating-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+.hero-floating-card strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+
+.hero-floating-card small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   CAROUSEL CONTROLS
+========================================= */
+
+.hero-control {
+  width: 60px;
+
+  opacity: 1;
+
+  z-index: 10;
+}
+
+
+.hero-arrow {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+}
+
+
+.hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   INDICATORS
+========================================= */
+
+.hero-indicators {
+  bottom: 20px;
+
+  z-index: 10;
+}
+
+.hero-indicators button {
+  width: 25px;
+
+  height: 4px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  margin: 0 4px;
+
+  opacity: 0.4;
+}
+
+.hero-indicators button.active {
+  width: 45px;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+
+@keyframes cardFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    min-height: auto;
+
+    padding: 70px 0 90px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 10vw, 4rem);
+
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image-wrapper {
+    min-height: 400px;
+
+    margin-top: 20px;
+  }
+
+  .hero-image {
+    max-height: 400px;
+  }
+
+  .hero-floating-card {
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: 10px;
+
+    white-space: nowrap;
+  }
+
+  .hero-control {
+    width: 45px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    padding-top: 55px;
+
+    padding-bottom: 75px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+
+    padding: 8px 14px;
+  }
+
+  .hero-small-title {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    min-height: 330px;
+  }
+
+  .hero-image {
+    max-height: 330px;
+  }
+
+  .hero-floating-card {
+    display: none;
+  }
+
+  .hero-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+}
 
 
 

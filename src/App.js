@@ -24,7 +24,7 @@ function App() {
     <Route path="produce" element={<Produce/>} />
     <Route path="blog" element={<Blog/>} />
     <Route path="about" element={<About/>} />
-    <Route path="porfolio" element={<Portfolio/>} />
+    <Route path="portfolio" element={<Portfolio/>} />
     <Route path="contact" element={<Contact/>} />
     <Route path="*" element={<Nomatch/>} />
   </Route>

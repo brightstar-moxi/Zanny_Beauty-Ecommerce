@@ -1,4 +1,4 @@
-// import Navbar from "./Navbar";
+ import Navbar from "./Navbar";
 
 // import under1 from "./weavon1.jpg";
 // import under2 from "./weavon2 fixed.jpg"; 
@@ -36,7 +36,7 @@
 // import foot7 from "./foot7.jpeg"; 
 // import foot8 from "./foot8.jpg"; 
 
-// import Footer from "./Footer"
+ import Footer from "./Footer"
 
 
 // const Produce =(props) =>{
@@ -44,7 +44,7 @@
 
 //     return(
 //         <>
-//         <Navbar/>
+//         
 //         <h2 style={{textAlign:"center",fontFamily:"roboto",fontWeight:"bolder", color:"darkmagenta"}}> <b>Zanny Beauty Palace hair styles & Products </b> </h2>
 //         <div style={{width:"90%",margin:"auto",color:"white"}}>
 //         <p style={{fontSize:"110%",fontFamily:"roboto"}}> This is Zanny Beauty palace is a professional beauty service
@@ -691,7 +691,7 @@ const ProductSection = ({ title, description, products }) => {
 const Produce = () => {
   return (
     <main className="products-page">
-
+<Navbar/>
       {/* Hero */}
 
       <section className="products-hero">
@@ -750,7 +750,7 @@ const Produce = () => {
         description="Complete your style with our footwear collection."
         products={footwares}
       />
-
+<Footer/>
     </main>
   );
 };

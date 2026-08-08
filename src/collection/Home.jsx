@@ -287,11 +287,10 @@ export default function HeroCarousel() {
     <section className="mb-5">
        <Navbar/>
 
- <div
+<div
   id="heroCarousel"
   className="carousel slide carousel-fade modern-hero"
   data-bs-ride="carousel"
-  data-bs-interval="5000"
 >
   <div className="carousel-inner">
 
@@ -303,102 +302,92 @@ export default function HeroCarousel() {
 
         <section className={`hero-section ${slide.bgClass}`}>
 
-          {/* Decorative Background */}
+          {/* Decorative elements */}
           <div className="hero-glow hero-glow-one"></div>
           <div className="hero-glow hero-glow-two"></div>
-          <div className="hero-circle hero-circle-one"></div>
-          <div className="hero-circle hero-circle-two"></div>
 
-          <div className="container position-relative">
+          <div className="hero-dots"></div>
 
-            <div className="row align-items-center min-vh-75 py-5">
+          <div className="hero-leaf hero-leaf-one">
+            ♧
+          </div>
 
-              {/* =========================
-                  LEFT CONTENT
-              ========================== */}
+          <div className="hero-leaf hero-leaf-two">
+            ♧
+          </div>
 
-              <div className="col-lg-6">
+          <div className="container">
+            <div className="row align-items-center hero-row">
 
-                <div className="hero-content text-center text-lg-start">
+              {/* LEFT CONTENT */}
+              <div className="col-lg-6 hero-content">
 
-                  {/* Badge */}
-                  <div className="hero-badge mb-4">
-                    <span className="hero-badge-icon">
-                      ✨
-                    </span>
+                <span className="hero-badge">
+                  <span>✦</span>
+                  Welcome to Zanny Beauty Palace
+                </span>
 
-                    <span>
-                      Welcome to Zanny Beauty Palace
-                    </span>
-                  </div>
+                <h1 className="text-white">
+                  {slide.title}
+                </h1>
 
-                  {/* Small Label */}
-                  <p className="hero-small-title mb-2">
-                    PREMIUM BEAUTY & HAIR CARE
-                  </p>
+                <p className="hero-description text-white">
+                  {slide.subtitle}
+                </p>
 
-                  {/* Main Heading */}
-                  <h1 className="hero-title">
-                    {slide.title}
-                  </h1>
+                <div className="hero-buttons">
 
-                  {/* Description */}
-                  <p className="hero-description mt-4">
-                    {slide.subtitle}
-                  </p>
+                  <Link
+                    to="/produce"
+                    className="hero-btn hero-btn-primary"
+                  >
+                    Shop Now
+                    <span>→</span>
+                  </Link>
 
-                  {/* Buttons */}
-                  <div className="
-                    hero-buttons
-                    d-flex
-                    flex-wrap
-                    gap-3
-                    justify-content-center
-                    justify-content-lg-start
-                    mt-4
-                  ">
+                  <Link
+                    to="/portfolio"
+                    className="hero-btn hero-btn-outline"
+                  >
+                    Explore Services
+                  </Link>
 
-                    <Link
-                      to="/produce"
-                      className="btn hero-btn-primary"
-                    >
-                      Shop Now
+                </div>
 
-                      <i className="fa-solid fa-arrow-right ms-2"></i>
-                    </Link>
+                {/* BENEFITS */}
+                <div className="hero-benefits ">
 
-                    <Link
-                      to="/about"
-                      className="btn hero-btn-secondary"
-                    >
-                      Discover More
-
-                      <i className="fa-solid fa-arrow-right ms-2"></i>
-                    </Link>
-
-                  </div>
-
-                  {/* Trust Info */}
-                  <div className="
-                    hero-trust
-                    mt-4
-                    d-flex
-                    flex-wrap
-                    gap-4
-                    justify-content-center
-                    justify-content-lg-start
-                  ">
-
-                    <div className="trust-item">
-                      <i className="fa-solid fa-circle-check"></i>
-                      Quality Products
+                  <div className="hero-benefit">
+                    <div className="benefit-icon">
+                      ♡
                     </div>
 
-                    <div className="trust-item">
-                      <i className="fa-solid fa-circle-check"></i>
-                      Professional Service
+                    <div >
+                      <strong>Quality Products</strong>
+                      <small >Premium & Trusted</small>
+                    </div>
+                  </div>
+
+                  <div className="hero-benefit">
+                    <div className="benefit-icon">
+                      ✦
                     </div>
 
+                    <div>
+                      <strong>Expert Stylists</strong>
+                      <small>Professional Care</small>
+                    </div>
+                  </div>
+
+                  <div className="hero-benefit">
+                    <div className="benefit-icon">
+                      ♡
+                    </div>
+
+                    <div>
+                      <strong>Customer Love</strong>
+                      <small>Satisfaction First</small>
+                    </div>
                   </div>
 
                 </div>
@@ -406,48 +395,50 @@ export default function HeroCarousel() {
               </div>
 
 
-              {/* =========================
-                  RIGHT IMAGE
-              ========================== */}
-
-              <div className="col-lg-6">
+              {/* RIGHT IMAGE */}
+              <div className="col-lg-6 hero-image-column">
 
                 <div className="hero-image-wrapper">
 
-                  {/* Image Glow */}
-                  <div className="hero-image-glow"></div>
+                  <div className="hero-image-circle"></div>
 
-                  {/* Main Image */}
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className="hero-image img-fluid"
+                    className="hero-image"
                   />
 
-                  {/* Floating Card */}
-                  <div className="hero-floating-card">
+                </div>
 
-                    <div className="floating-icon">
-                      <i className="fa-solid fa-heart"></i>
-                    </div>
+                {/* Floating card */}
+                <div className="hero-floating-card">
 
-                    <div>
-                      <strong>Beauty That Inspires</strong>
-
-                      <small>
-                        Look good. Feel confident.
-                      </small>
-                    </div>
-
+                  <div className="floating-icon">
+                    ✦
                   </div>
+
+                  <div>
+                    <strong>New Arrivals</strong>
+
+                    <p>
+                      Discover our latest
+                      beauty products
+                    </p>
+                  </div>
+
+                  <span className="floating-arrow">
+                    →
+                  </span>
 
                 </div>
 
               </div>
 
             </div>
-
           </div>
+
+          {/* Bottom wave */}
+          <div className="hero-wave"></div>
 
         </section>
 
@@ -457,61 +448,29 @@ export default function HeroCarousel() {
   </div>
 
 
-  {/* =========================
-      PREVIOUS BUTTON
-  ========================== */}
-
+  {/* Previous */}
   <button
-    className="carousel-control-prev hero-control"
+    className="hero-control hero-control-prev"
     type="button"
     data-bs-target="#heroCarousel"
     data-bs-slide="prev"
-    aria-label="Previous slide"
   >
-    <span className="hero-arrow">
-      <i className="fa-solid fa-chevron-left"></i>
-    </span>
+    <span>‹</span>
   </button>
 
 
-  {/* =========================
-      NEXT BUTTON
-  ========================== */}
-
+  {/* Next */}
   <button
-    className="carousel-control-next hero-control"
+    className="hero-control hero-control-next"
     type="button"
     data-bs-target="#heroCarousel"
     data-bs-slide="next"
-    aria-label="Next slide"
   >
-    <span className="hero-arrow">
-      <i className="fa-solid fa-chevron-right"></i>
-    </span>
+    <span>›</span>
   </button>
 
-
-  {/* =========================
-      INDICATORS
-  ========================== */}
-
-  <div className="carousel-indicators hero-indicators">
-
-    {heroSlides.map((slide, index) => (
-      <button
-        key={slide.id}
-        type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide-to={index}
-        className={index === 0 ? "active" : ""}
-        aria-label={`Slide ${index + 1}`}
-      ></button>
-    ))}
-
-  </div>
-
 </div>
-      <section className="py-5 bg-white">
+      <section className="py-5">
     <div className="container">
 
         <div className="row align-items-center gy-5">

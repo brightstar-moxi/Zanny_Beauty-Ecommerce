@@ -300,7 +300,7 @@ const Connect = () => {
             Contact Us
           </span>
 
-          <h1 className="display-3 fw-bold mt-3">
+          <h1 className="display-3 fw-bold mt-3 text-white">
             We'd Love To Hear From You
           </h1>
 

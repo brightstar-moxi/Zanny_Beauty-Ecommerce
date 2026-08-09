@@ -11,9 +11,9 @@ const Contact =()=>{
       message: "",
     });
     
-    const [submitted, setSubmitted] = useState(false);
+    // const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState(false);
-     const [loading, setLoading] = useState(false);
+    //  const [loading, setLoading] = useState(false);
     
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -211,7 +211,7 @@ onChange={handleChange}
             </div>
 
             {/* Alerts */}
-
+{/* 
             {submitted && (
 
               <div className="alert alert-success">
@@ -222,9 +222,9 @@ onChange={handleChange}
 
               </div>
 
-            )}
+            )} */}
 
-            {error && (
+            {/* {error && (
 
               <div className="alert alert-danger">
 
@@ -234,9 +234,14 @@ onChange={handleChange}
 
               </div>
 
-            )}
-
-           <button
+            )} */}
+{error && (
+  <div className="alert alert-warning">
+    <i className="fa-solid fa-circle-exclamation me-2"></i>
+    Please fill in all the fields before continuing.
+  </div>
+)}
+           {/* <button
   type="submit"
   className="btn btn-dark rounded-pill px-5 py-3"
   disabled={loading}
@@ -244,6 +249,14 @@ onChange={handleChange}
   <i className="fa-solid fa-paper-plane me-2"></i>
 
   {loading ? "Sending..." : "Send Message"}
+</button> */}
+
+<button
+  type="submit"
+  className="btn btn-dark rounded-pill px-5 py-3"
+>
+  <i className="fa-solid fa-paper-plane me-2"></i>
+  Send Message
 </button>
 
 {showEmailModal && (

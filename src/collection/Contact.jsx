@@ -13,7 +13,7 @@ const Contact =()=>{
     
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     
     const handleChange = (e) => {
       const { name, value } = e.target;

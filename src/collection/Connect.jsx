@@ -196,33 +196,33 @@
 
 // import { Link } from "react-router-dom";
 // import video from "./MODERN HAIR SALON.mp4";
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import video from "./MODERN HAIR SALON.mp4";
 
 
 const Connect = () => {
 
-  const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-});
+//   const [formData, setFormData] = useState({
+//   name: "",
+//   email: "",
+//   phone: "",
+//   subject: "",
+//   message: "",
+// });
 
-const [submitted, setSubmitted] = useState(false);
-const [error, setError] = useState(false);
-const [loading, setLoading] = useState(false);
+// const [submitted, setSubmitted] = useState(false);
+// const [error, setError] = useState(false);
+// const [loading, setLoading] = useState(false);
 
-const handleChange = (e) => {
-  const { name, value } = e.target;
+// const handleChange = (e) => {
+//   const { name, value } = e.target;
 
-  setFormData((prev) => ({
-    ...prev,
-    [name]: value,
-  }));
-};
+//   setFormData((prev) => ({
+//     ...prev,
+//     [name]: value,
+//   }));
+// };
 
 // const submit = async (e) => {
 //   e.preventDefault();
